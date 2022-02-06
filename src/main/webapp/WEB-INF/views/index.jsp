@@ -13,10 +13,24 @@
           rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
           crossorigin="anonymous">
 
-    <title>Accident</title>
+    <title>Главная</title>
 
 </head>
 <body>
+
+<div class="container">
+<div class="row">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="<c:url value='/'/>">Главная</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="<c:url value='/create'/>">Добавить инцидент</a>
+        </li>
+    </ul>
+</div>
+</div>
 <div class="container">
     <div class="row">
         <table class="table table-bordered border border-dark">

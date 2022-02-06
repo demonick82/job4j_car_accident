@@ -13,4 +13,9 @@ public class AccidentService {
     public Collection<Accident> findAllAccidents() {
         return mem.findAllAccidents();
     }
+
+    public void create(Accident accident) {
+        mem.save(accident);
+    }
+
 }

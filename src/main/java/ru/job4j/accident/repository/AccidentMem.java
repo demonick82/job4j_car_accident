@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class AccidentMem implements Store {
     private static final AccidentMem INST = new AccidentMem();
     private final Map<Integer, Accident> accidents = new HashMap<>();
-    private static final AtomicInteger ID = new AtomicInteger(3);
+    private static final AtomicInteger ID = new AtomicInteger(2);
 
     private AccidentMem() {
         Accident accident1 = Accident.of("Превышение скорости", "Превышение скорости на 20 км/ч",
@@ -32,5 +32,13 @@ public class AccidentMem implements Store {
     @Override
     public Collection<Accident> findAllAccidents() {
         return accidents.values();
+    }
+
+    @Override
+    public void save(Accident accident) {
+        if (accident.getId() == 0) {
+            accident.setId(ID.incrementAndGet());
+        }
+        accidents.put(accident.getId(), accident);
     }
 }
