@@ -38,6 +38,7 @@
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">Наименование</th>
+                <th scope="col">Тип</th>
                 <th scope="col">Описание</th>
                 <th scope="col">Адрес</th>
                 <th scope="col">Редактировать</th>
@@ -53,6 +54,10 @@
                     <td>
                         <c:out value="${accindent.name}"/>
                     </td>
+                    <td>
+                        <c:out value="${accindent.accidentType.name}"/>
+                    </td>
+
                     <td>
                         <c:out value="${accindent.text}"/>
                     </td>
