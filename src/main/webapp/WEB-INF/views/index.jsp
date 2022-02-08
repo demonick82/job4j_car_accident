@@ -40,6 +40,7 @@
                 <th scope="col">Наименование</th>
                 <th scope="col">Описание</th>
                 <th scope="col">Адрес</th>
+                <th scope="col">Редактировать</th>
             </tr>
             </thead>
             <tbody>
@@ -58,11 +59,13 @@
                     <td>
                         <c:out value="${accindent.address}"/>
                     </td>
+                    <td>
+                        <a href="<c:url value='/update?id=${accindent.id}'/>">редактировать</a>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>
         </table>
-
     </div>
 
 </div>
