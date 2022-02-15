@@ -55,6 +55,7 @@ public class AccidentMem implements Store {
         accidents.put(accident.getId(), accident);
     }
 
+
     @Override
     public Accident findAccidentById(int id) {
         return accidents.get(id);
