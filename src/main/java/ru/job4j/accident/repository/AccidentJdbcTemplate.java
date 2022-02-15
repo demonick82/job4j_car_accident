@@ -25,8 +25,8 @@ public class AccidentJdbcTemplate implements Store {
 
     @Override
     public Collection<Accident> findAllAccidents() {
-        return jdbc.query("select id, name, text, address, accident_type_id " +
-                "from accidents", (rs, row) -> {
+        return jdbc.query("select id, name, text, address, accident_type_id "
+                + "from accidents", (rs, row) -> {
             Accident accident = new Accident();
             accident.setId(rs.getInt("id"));
             accident.setName(rs.getString("name"));
@@ -119,6 +119,7 @@ public class AccidentJdbcTemplate implements Store {
                     rule.getId());
         }
     }
+
     private void create(Accident accident) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbc.update(connection -> {
