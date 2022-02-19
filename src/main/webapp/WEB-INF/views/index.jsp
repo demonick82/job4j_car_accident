@@ -18,22 +18,27 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="row">
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link" href="<c:url value='/'/>">Главная</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="<c:url value='/create'/>">Добавить инцидент</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            Car Accident
+        </a>
+        <div class="row">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="<c:url value='/'/>">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<c:url value='/create'/>">Добавить инцидент</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
-<div class="container">
+</nav>
+
+<div class="container pt-3">
     <div class="row">
-        <table class="table table-bordered border border-dark">
+        <table class="table table-bordered border-dark text-center">
             <thead>
             <tr>
                 <th scope="col">id</th>
@@ -70,7 +75,7 @@
                         <c:out value="${accindent.address}"/>
                     </td>
                     <td>
-                        <a href="<c:url value='/update?id=${accindent.id}'/>">редактировать</a>
+                        <a class="btn btn-outline-dark" href="<c:url value='/update?id=${accindent.id}'/>">редактировать</a>
                     </td>
                 </tr>
             </c:forEach>
