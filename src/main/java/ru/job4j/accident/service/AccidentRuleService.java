@@ -16,6 +16,7 @@ public class AccidentRuleService {
     private final RulesRepository rr;
     private final AccidentRepository ar;
 
+
     public AccidentRuleService(RulesRepository rr, AccidentRepository ar) {
         this.rr = rr;
         this.ar = ar;

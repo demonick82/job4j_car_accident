@@ -75,7 +75,8 @@
                         <c:out value="${accindent.address}"/>
                     </td>
                     <td>
-                        <a class="btn btn-outline-dark" href="<c:url value='/update?id=${accindent.id}'/>">редактировать</a>
+                        <a class="btn btn-outline-dark"
+                           href="<c:url value='/update?id=${accindent.id}'/>">редактировать</a>
                     </td>
                 </tr>
             </c:forEach>
