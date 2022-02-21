@@ -1,4 +1,4 @@
-package ru.job4j.accident.control;
+package ru.job4j.accident;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
