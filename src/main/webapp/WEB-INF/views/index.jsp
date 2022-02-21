@@ -32,7 +32,7 @@
                     <a class="nav-link active" href="<c:url value='/'/>">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<c:url value='/create'/>">Добавить инцидент</a>
+                    <a class="nav-link" href="create">Добавить инцидент</a>
                 </li>
             </ul>
         </div>
