@@ -20,11 +20,14 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand">
             Car Accident
         </a>
         <div class="row">
             <ul class="navbar-nav ms-auto">
+                <li class="nav-item" >
+                   <a class="nav-link active">  Приветствуем Вас : ${user.username}</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="<c:url value='/'/>">Главная</a>
                 </li>
@@ -55,24 +58,24 @@
             <c:forEach items="${accindents}" var="accindent">
                 <tr>
                     <td>
-                        <c:out value="${accindent.id}"/>
+                        ${accindent.id}
                     </td>
                     <td>
-                        <c:out value="${accindent.name}"/>
+                        ${accindent.name}
                     </td>
                     <td>
-                        <c:out value="${accindent.accidentType.name}"/>
+                       ${accindent.accidentType.name}
                     </td>
                     <td>
                         <c:forEach items="${accindent.rules}" var="rule">
-                            <c:out value="${rule.name}"/>
+                            ${rule.name}
                         </c:forEach>
                     </td>
                     <td>
-                        <c:out value="${accindent.text}"/>
+                        ${accindent.text}
                     </td>
                     <td>
-                        <c:out value="${accindent.address}"/>
+                        ${accindent.address}
                     </td>
                     <td>
                         <a class="btn btn-outline-dark"
