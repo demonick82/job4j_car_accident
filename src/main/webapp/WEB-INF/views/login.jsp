@@ -13,7 +13,7 @@
           rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
           crossorigin="anonymous">
 
-    <title>Создать</title>
+    <title>Авторизация</title>
 
 </head>
 <body>
@@ -25,7 +25,7 @@
         <div class="row">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="<c:url value='#'/>">Регистрация</a>
+                    <a class="nav-link" href="<c:url value='/reg'/>">Регистрация</a>
                 </li>
             </ul>
         </div>
