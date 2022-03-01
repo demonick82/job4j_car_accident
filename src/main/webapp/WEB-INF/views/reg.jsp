@@ -52,15 +52,12 @@
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary">Войти</button>
                         </div>
-                        <%--
-                                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                        --%>
                     </form>
-                    <%--                    <c:if test="${not empty errorMessage}">
-                                            <div style="color:red; font-weight: bold; margin: 30px 0px;">
-                                                    ${errorMessage}
-                                            </div>
-                                        </c:if>--%>
+                    <c:if test="${not empty errorMessage}">
+                        <div style="color:red; font-weight: bold; margin: 30px 0px;">
+                                ${errorMessage}
+                        </div>
+                    </c:if>
                 </div>
             </div>
         </div>

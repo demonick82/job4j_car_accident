@@ -33,5 +33,7 @@ public class ReqService {
         users.save(user);
     }
 
-
+    public boolean userNameCheck(String name) {
+        return users.findByUsername(name) == null;
+    }
 }

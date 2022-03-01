@@ -1,9 +1,11 @@
 package ru.job4j.accident.control;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import ru.job4j.accident.model.User;
 import ru.job4j.accident.service.ReqService;
 
@@ -16,12 +18,18 @@ public class RegControl {
     }
 
     @PostMapping("/reg")
-    public String regSave(@ModelAttribute User user) {
-        user.setEnabled(true);
-        user.setPassword(rs.getPassword(user));
-        user.setAuthority(rs.getAuthority("ROLE_USER"));
-        rs.save(user);
-        return "redirect:/login";
+    public String regSave(@ModelAttribute User user, Model model) {
+
+        if (rs.userNameCheck(user.getUsername())) {
+            user.setEnabled(true);
+            user.setPassword(rs.getPassword(user));
+            user.setAuthority(rs.getAuthority("ROLE_USER"));
+            rs.save(user);
+            return "redirect:/login";
+        } else {
+            model.addAttribute("errorMessage", "Пользователь уже существует");
+            return "reg";
+        }
     }
 
     @GetMapping("/reg")
